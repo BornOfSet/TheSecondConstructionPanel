@@ -1,4 +1,6 @@
-----soies overwritten----外部导入重要操作符
+----这是最终在游戏中起作用的文件。These are the codes actually running in the game , defining the behaviour of calling the ui out , passing the command to engs
+----
+----significant operators imported from external sources overwritten----
 local CreateWindow = import('/lua/maui/window.lua').Window
 local Button = import('/lua/maui/button.lua').Button
 local UIFile = import('/lua/ui/uiutil.lua').UIFile
@@ -40,7 +42,7 @@ local existed = {}
 ----local(directory)----
 local path = '/mods/UIvault/local/ui_4/'
 
-----local(sources)----
+----local(functions)----
 local function SetBtnTextures(ui, id)
 	local location = '/icons/units/' .. id .. '_icon.dds'
 	ui:IconTextures(UIFile(location, true),path) --优先级问题，需要给定path。我觉得不定义成局部变量可以解决该问题，反正文件全局环境也不共用不是吗？但我想它看起来更工整，我是强迫症
