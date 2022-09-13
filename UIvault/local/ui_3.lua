@@ -1,5 +1,10 @@
 ----这是最终在游戏中起作用的文件。These are the codes actually running in the game , defining the behaviour of calling the ui out , passing the command to engs
-----
+----Ahh . How I love these neatly codes . I'm proud of them lol 
+----This might be the simplest and prettiest way to have the effect
+----:p
+
+
+
 ----significant operators imported from external sources overwritten----
 local CreateWindow = import('/lua/maui/window.lua').Window
 local Button = import('/lua/maui/button.lua').Button
