@@ -1,6 +1,9 @@
 --按钮案例 废案
+----This is how I did that last time . It renders buttons on the top of the unit icons , instead of setting icons themselves as buttons
+----When I was working on the ui_3.lua ( the main one) , I met a lmao problem that buttons were not able to respond to my mouse . 
+----Finally , I found it out that it was a depth problem and I skipped the phase assigning a texture to bitmap because I had no parameters besides UI
 
-----soies overwritten----外部导入重要操作符
+
 local CreateWindow = import('/lua/maui/window.lua').Window
 local CreateBitmap = import('/lua/maui/bitmap.lua').Bitmap
 local CreateButton = import('/lua/maui/button.lua').Button
@@ -8,14 +11,14 @@ local LayoutHelpers = import('/lua/maui/layouthelpers.lua')
 local UIUtil = import('/lua/ui/uiutil.lua')
 local UIFile = UIUtil.UIFile
 
-----local(objects)----
+
 local UI
 local existed = {}
 
-----local(directory)----
+
 local path = '/mods/UIvault/local/ui_1/'
 
-----local(sources)----
+
 local function SetIconTextures(ui, id)
 	local location = '/icons/units/' .. id .. '_icon.dds'
 	if DiskGetFileInfo(UIFile(location, true)) then --这个true代表同样寻找mod内容
