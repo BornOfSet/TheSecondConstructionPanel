@@ -1,4 +1,13 @@
-----soies overwritten----外部导入重要操作符
+----
+----Displays specific units' icons on UI in the formation of 2Darray.
+----以二维数组的方式将指定的单位图标显示在UI上
+----I know it looks confusing through my description . Just enable them in localizatioin.lua and you will see the effect
+----
+----啊对，我知道我这代码写的非常反人类，I know they look terrible and not intuitive at all ! 但这样写真的很酷，很好看，因为三个函数嵌套，将主要的代码（就是for循环里面的那些）整理得非常简洁
+----代码不直观的原因主要是定义在后面的局部变量没法被定义在前面的函数找到，即使该函数运行在这些局部变量的定义之后
+----The main reason for the codes to be not intuitive is the variables defines after the function using them cannot be found by the functions even if which run after the variable definations .
+----
+----significant operators imported from external sources-----
 local CreateWindow = import('/lua/maui/window.lua').Window
 local CreateBitmap = import('/lua/maui/bitmap.lua').Bitmap
 local LayoutHelpers = import('/lua/maui/layouthelpers.lua')
@@ -12,7 +21,7 @@ local existed = {}
 ----local(directory)----
 local path = '/mods/UIvault/local/ui_1/'
 
-----local(sources)----
+----local(functions)----
 local function SetIconTextures(ui, id)
 	local location = '/icons/units/' .. id .. '_icon.dds'
 	if DiskGetFileInfo(UIFile(location, true)) then --这个true代表同样寻找mod内容
