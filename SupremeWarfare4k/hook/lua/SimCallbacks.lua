@@ -1,8 +1,8 @@
 ----
+---- I put those complicated hook stuff in dedicated folders so it won't ruin the simplicity of my ui codes
 ----
-----
-----
-----
+----TODO : group command
+----TODO : BoxFormationSpawn
 ----
 ----
 ----
