@@ -1,11 +1,16 @@
-----local(objects)----
+----
+----NOTICE : This file is unnecessary for the gameplay . It creates a window in game with a picture of a cosplay girl , and what I want to stress is that this is implemented through severl lines of really tidy and simple codes after a hard cultivation. I left it here in order to tell you how to quickly create a simple window
+----NOTICE : 这个文件其实没啥用。它把Misa呆呆的照片贴在游戏UI里。我觉得这个文件有价值的地方在于，经过我辛苦研究（恬不知耻地划重点），我最终得以用几行十分简单的代码来生成这一可以拖拽，放大缩小的窗口，主要还是得益于游戏Window.lua这一文件里定义的黑箱，我把这个文件留在这里的意义就是让有兴趣的人参考它是如何实现的。我他妈英语差的批爆，只会说EEEEEEEEE。
+----The defines of relative functions can be found in the paths shown.
+----
+----objects----
 local UI
 local Image
 
-----local(directory)----
+----directory----
 local path = '/mods/UIvault/local/ui_1/'
 
-----soies overwritten----
+----significant operators imported from external sources----
 local CreateWindow = import('/lua/maui/window.lua').Window
 local CreateBitmap = import('/lua/maui/bitmap.lua').Bitmap
 local LayoutHelpers = import('/lua/maui/layouthelpers.lua')
