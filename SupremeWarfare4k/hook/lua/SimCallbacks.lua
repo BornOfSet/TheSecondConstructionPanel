@@ -1,14 +1,21 @@
 ----
----- I put those complicated hook stuff in dedicated folders so it won't ruin the simplicity of my ui codes
-----
-----TODO : group command
-----TODO : BoxFormationSpawn
 ----
 ----
 ----
 ----
+----
+----
+----
+---- 
 ----
 Callbacks.TheSecondConstructionPanel = function(data, units)
+	if data.yes then
+		IssueClearCommands(units)
+	end
 	local id = data.id
-	IssueBuildMobile(units,units[1]:GetPosition(),id,{}) --不符合当前科技等级和阵营等工程师属性字段的单位无法建造
+	local clicklocationtemp = data.pos 
+	for k,v in units do
+		IssueBuildMobile({v},clicklocationtemp,id,{})  
+		--Thank you for expanding my brain XD --Although it looks like they're going to build units for each individual of them , in fact the buildings at the same location would be calculated as a single one , and thus they're synced in co-constructing
+	end
 end
